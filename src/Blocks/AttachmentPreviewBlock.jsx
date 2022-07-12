@@ -37,6 +37,7 @@ const FileDetails = ({style, attachment}) => {
     const isPreviewableImage = attachment && attachment.media && attachment.mimetype.includes("image/");
     const {width} = useWindowDimensions();
     const [type, setType] = useState("blank");
+    const [layout, setLayout] = useState("row");
 
 
     useEffect(() => {
@@ -53,7 +54,11 @@ const FileDetails = ({style, attachment}) => {
         }
     },[attachment, isPreviewableImage])
 
-    return <Flexbox alignContent={"center"} justifyItems={'center'} alignItems={"center"} flexDirection={width > 650 ? "row" : 'column'} class={'animated-transitions'} style={style}>
+    useEffect(() => {
+        setLayout(width > 650 ? 'row' : 'column')
+    }, [width])
+
+    return <Flexbox alignContent={"center"} justifyItems={'center'} alignItems={"center"} flexDirection={layout} class={'animated-transitions'} style={style}>
         <img alt={'Preview'} src={isPreviewableImage ? attachment.urlDownload : process.env.PUBLIC_URL+`/icons/${type}.png`} className={'img-preview'} style={{padding: (isPreviewableImage ? '0' : '10px')}} />
         <Information attachment={attachment ?? {}}/>
     </Flexbox>
