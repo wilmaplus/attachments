@@ -1,0 +1,23 @@
+.error-code {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: var(--color-4);
+}
+
+.error-widget h2, .error-widget h3, .error-widget p, .error-widget span {
+    margin: 4px;
+    max-width: 340px;
+    text-align: center;
+}
+
+.error-widget h3, .error-widget h2, h3, h2 {
+    color: var(--on-color-4-heavy);
+}
+
+.error-widget p, .error-widget span, span {
+    color: var(--on-color-4);
+}

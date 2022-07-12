@@ -1,0 +1,20 @@
+
+.wilmaplus-button {
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: var(--color-3-alternate);
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 40px;
+    color: var(--on-color-3);
+    font-weight: 700;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+    border: 0;
+}
+
+.wilmaplus-button:hover {
+    background: var(--color-3);
+    color: var(--color-3-alternate) !important;
+}

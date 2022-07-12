@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="Katsele ja lataa liitteet Wilma-viestistä"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
@@ -24,20 +24,36 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Wilma Plus Liitteet</title>
+    <style>
+      body {
+        background: white;
+      }
+      @media (prefers-color-scheme: dark) {
+        body {
+          background: black;
+        }
+      }
+    </style>
+    <script>
+      const lightSchemeIcon = document.querySelector('link#light-scheme-icon');
+      const darkSchemeIcon = document.querySelector('link#dark-scheme-icon');
+      const matcher = window.matchMedia('(prefers-color-scheme: dark)');
+      const onUpdate = () => {
+        if (matcher.matches) {
+          lightSchemeIcon.remove();
+          document.head.append(darkSchemeIcon);
+        } else {
+          document.head.append(lightSchemeIcon);
+          darkSchemeIcon.remove();
+        }
+      }
+      matcher.addListener(onUpdate);
+      onUpdate();
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>
