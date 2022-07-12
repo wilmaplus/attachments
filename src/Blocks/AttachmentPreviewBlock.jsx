@@ -34,7 +34,7 @@ const Information = ({attachment}) => {
 
 const FileDetails = ({style, attachment}) => {
 
-    const isPreviewableImage = false && attachment && attachment.media && attachment.mimetype.includes("image/");
+    const isPreviewableImage = attachment && attachment.media && attachment.mimetype.includes("image/");
     const {width} = useWindowDimensions();
     const [type, setType] = useState("blank");
 
