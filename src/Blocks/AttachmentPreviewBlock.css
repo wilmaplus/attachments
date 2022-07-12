@@ -1,0 +1,30 @@
+.img-preview {
+    object-fit: cover;
+    height: 95px;
+    width: 95px;
+    border-radius: 12px;
+    border: 0;
+    margin: 12px;
+    background: var(--color-3-alternate);
+}
+
+.attachment-info {
+    margin: 5px;
+    display: inline-block;
+}
+
+.attachment-info h2, .attachment-info p {
+    margin: 0;
+    word-wrap: break-word;
+}
+
+.attachment-info h2 {
+    max-width: 75vw;
+    text-align: center;
+    max-lines: 2;
+}
+
+.attachment-actions {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}

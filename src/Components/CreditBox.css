@@ -1,0 +1,11 @@
+.credit-box {
+    margin: 8px;
+}
+
+.copyright {
+    color: var(--color-2);
+}
+
+.copyright > a {
+    color: var(--color-1);
+}

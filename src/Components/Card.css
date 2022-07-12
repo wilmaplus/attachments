@@ -1,25 +1,21 @@
 
 .wilmaplus-card {
     display: flex;
-    width: 100%;
-    min-height: 500px;
+    min-height: 350px;
+    max-width: 750px;
     background: var(--card-1);
+    max-height: 532px;
     border-radius: 15px;
-    transition: height 0.4s ease, width 0.4s ease;
+    transition: height 1s, width 1s;
     margin: 15px;
 }
 
 .wilmaplus-card > content {
-    flex: 1;
-    display: inline-block;
+    display: block;
     margin: 27px;
     overflow: hidden;
     width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    justify-items: center;
-    align-content: center;
-    align-items: center;
+    max-height: 532px;
 }
 
 html, body, #root {

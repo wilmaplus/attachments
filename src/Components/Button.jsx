@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import React from 'react';
 
 export const WilmaPlusButton = (props) => {
-    return <input className="wilmaplus-button" onClick={props.onClick} style={props.style} type={props.type} name={props.name} value={props.value}>
+    return <button className="wilmaplus-button" onClick={props.onClick} style={props.style}>
         {props.title}
-    </input>
+    </button>
 }
 
 export const WilmaPlusButtonLink = (props) => {

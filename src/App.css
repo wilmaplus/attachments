@@ -1,0 +1,24 @@
+.site-root {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+}
+
+#attachment-background {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    -webkit-filter: blur(18px);
+    -moz-filter: blur(18px);
+    -o-filter: blur(18px);
+    -ms-filter: blur(18px);
+    filter: blur(18px);
+}
