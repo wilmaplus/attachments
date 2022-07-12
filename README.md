@@ -1,5 +1,4 @@
 # Wilma Plus Attachments
-=======
 Attachments preview UI
 
 ### `npm start`
